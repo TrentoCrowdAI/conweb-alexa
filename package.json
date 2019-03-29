@@ -2,7 +2,9 @@
   "name": "helloworld",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.4"
+  },
   "description": "Conversational interface with Alexa",
   "main": "index.js",
   "scripts": {
