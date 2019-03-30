@@ -7,6 +7,19 @@ var logger = require('morgan');
 var app = express();
 //var upload = multer(); // for parsing multipart/form-data
 
+var response= {
+    "version": "1.0",
+
+    "response": {
+      "outputSpeech": {
+        "type": "PlainText",
+        "text": "Hello world",
+        "playBehavior": "REPLACE_ENQUEUED"      
+      },      
+      "shouldEndSession": true
+    }
+  }
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -30,7 +43,20 @@ app.post('/', function (req, res, next) {
     //console.log(`request on post: ${ req.body.request.reason }`);
     //console.log(`request on post: ${ req.body.request.error.type }`);
     //console.log(`request on post: ${ req.body.request.error.message }`);
-    res.json('/responses/response.json')
+    res.json({
+        "version": "1.0",
+    
+        "response": {
+          "outputSpeech": {
+            "type": "PlainText",
+            "text": "Hello world",
+            "playBehavior": "REPLACE_ENQUEUED"      
+          },      
+          "shouldEndSession": true
+        }
+      }
+      
+      )
     console.log('response sended')
 }); 
 
