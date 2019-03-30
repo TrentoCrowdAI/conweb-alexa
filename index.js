@@ -23,7 +23,7 @@ app.get('/', function (req, res, next){
 
 app.post('/', function (req, res, next) {
   res.render('index', {request: req.body});
-  console.log(`request on post: ${ req.body.request }`);
+  console.log(`request on post: ${ req.body.request.requestId }`);
 }); 
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
