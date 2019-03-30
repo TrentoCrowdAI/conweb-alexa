@@ -22,8 +22,11 @@ app.get('/', function (req, res, next){
 });
 
 app.post('/', function (req, res, next) {
-  res.render('index', {request: req.body});
-  console.log(`request on post: ${ req.body.request.requestId }`);
+    console.log(`request on post: ${ req.body.request.type }`);
+    console.log(`request on post: ${ req.body.request.timestamp }`);
+    console.log(`request on post: ${ req.body.request.requestId }`);
+    console.log(`request on post: ${ req.body.request.locale }`);
+    res.send('/responses/response.json')
 }); 
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
