@@ -1,31 +1,16 @@
 {
   "name": "conweb-alexa",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "multer": "^1.4.1"
-  },
-  "description": "Conversational interface with Alexa",
-  "main": "index.js",
   "scripts": {
-    "start": "if [[$NODE_ENV == 'production']]; then node ./bin/www; else nodemon .bin/www; fi",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TrentoCrowdAI/conweb-alexa.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TrentoCrowdAI/conweb-alexa/issues"
-  },
-  "homepage": "https://github.com/TrentoCrowdAI/conweb-alexa#readme",
-  "devDependencies": {
-    "nodemon": "^1.18.10"
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
   }
 }

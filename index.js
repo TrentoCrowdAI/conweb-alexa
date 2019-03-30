@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var app = express();
 //var upload = multer(); // for parsing multipart/form-data
-/*
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -18,4 +18,6 @@ app.get('/', function (req, res, next){
 
 app.post('/', function (req, res, next) {
   res.render('index', {request: req})
-}); */
+}); 
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
