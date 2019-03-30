@@ -22,14 +22,16 @@ app.get('/', function (req, res, next){
 });
 
 app.post('/', function (req, res, next) {
-    console.log(`request on post: ${ req.body.request.type }`);
-    console.log(`request on post: ${ req.body.request.timestamp }`);
-    console.log(`request on post: ${ req.body.request.requestId }`);
-    console.log(`request on post: ${ req.body.request.locale }`);
-    console.log(`request on post: ${ req.body.request.reason }`);
+    console.log(`request on post: ${JSON.stringify(req)}`)
+    //console.log(`request on post: ${ req.body.request.type }`);
+    //console.log(`request on post: ${ req.body.request.timestamp }`);
+    //console.log(`request on post: ${ req.body.request.requestId }`);
+    //console.log(`request on post: ${ req.body.request.locale }`);
+    //console.log(`request on post: ${ req.body.request.reason }`);
     //console.log(`request on post: ${ req.body.request.error.type }`);
     //console.log(`request on post: ${ req.body.request.error.message }`);
     res.json('/responses/response.json')
+    console.log('response sended')
 }); 
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
