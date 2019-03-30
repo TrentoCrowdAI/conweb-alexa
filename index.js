@@ -26,6 +26,9 @@ app.post('/', function (req, res, next) {
     console.log(`request on post: ${ req.body.request.timestamp }`);
     console.log(`request on post: ${ req.body.request.requestId }`);
     console.log(`request on post: ${ req.body.request.locale }`);
+    console.log(`request on post: ${ req.body.request.reason }`);
+    //console.log(`request on post: ${ req.body.request.error.type }`);
+    //console.log(`request on post: ${ req.body.request.error.message }`);
     res.send('/responses/response.json')
 }); 
 
