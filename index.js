@@ -14,12 +14,12 @@ app.set('view engine', 'pug');
 //app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.get('/', function (req, res, next){
     res.render('index', {request: req});
-  console.log(`request on get: ${ req }`);
+  console.log(`request on get: ${ req.requestId }`);
 });
 
 app.post('/', function (req, res, next) {
   res.render('index', {request: req});
-  console.log(`request on post: ${ req.session.sessionId }`);
+  console.log(`request on post: ${ req.requestId }`);
 }); 
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
