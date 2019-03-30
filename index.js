@@ -18,7 +18,7 @@ app.get('/', function (req, res, next){
 });
 
 app.post('/', function (req, res, next) {
-  res.render('index', {request: req});
+  res.render('index', {request: req.header});
   console.log(`request on post: ${ req }`);
 }); 
 
