@@ -18,8 +18,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}))
 
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+//app.use(bodyParser.json()); // for parsing application/json
+//app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.get('/', function (req, res, next){
     res.render('index', {request: req});
   console.log(`request on get: ${ req.body }`);
@@ -28,6 +28,8 @@ app.get('/', function (req, res, next){
 app.post('/', function (req, res, next) {
     console.log(`request on post: ${ req.body.session.type.application.applicationId }`);
     clientId = req.body.session.type.application.applicationId;
+    if (clientId == skillID)
+        console.log("Id checked")
     //console.log(`request on post: ${ req.body.request.type }`);
     //console.log(`request on post: ${ req.body.request.timestamp }`);
     //console.log(`request on post: ${ req.body.request.requestId }`);
@@ -35,6 +37,8 @@ app.post('/', function (req, res, next) {
     //console.log(`request on post: ${ req.body.request.reason }`);
     //console.log(`request on post: ${ req.body.request.error.type }`);
     //console.log(`request on post: ${ req.body.request.error.message }`);
+    
+
     res.json();
     console.log('response sended')
 }); 
