@@ -35,9 +35,6 @@ app.post('/', function (req, res, next) {
     //console.log(`request on post: ${ req.body.request.reason }`);
     //console.log(`request on post: ${ req.body.request.error.type }`);
     //console.log(`request on post: ${ req.body.request.error.message }`);
-    
-    
-    
     res.json();
     console.log('response sended')
 }); 
