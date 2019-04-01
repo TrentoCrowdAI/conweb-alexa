@@ -1,5 +1,5 @@
 var express = require('express');
-const PORT = process.env.PORT || 443 ;
+const PORT = /*process.env.PORT ||*/ 443 ;
 var createError = require('http-errors');
 var path = require('path');
 var logger = require('morgan');
@@ -17,9 +17,6 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}))
-
-//app.use(bodyParser.json()); // for parsing application/json
-//app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.get('/', function (req, res, next){
     res.render('index', {request: req});
   console.log(`request on get: ${ req.body }`);
