@@ -28,7 +28,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say("You launched the app!");
+  response.say("The skill is open!");
 });
 
 alexaApp.intent('HelloWorldIntent', {
