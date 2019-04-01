@@ -40,4 +40,4 @@ app.post('/', function (req, res, next) {
     console.log('response sended')
 }); 
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+var listener = app.listen(PORT, () => console.log(`Listening on ${ listener.address.port }`))
