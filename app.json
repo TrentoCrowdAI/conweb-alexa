@@ -1,0 +1,12 @@
+{
+    "name": "alexa--skill",
+    "description": "alexa-app skill for Heroku.",
+    "repository": "https://github.com/TrentoCrowdAI/conweb-alexa",
+    "keywords": ["alexa", "amazon", "echo", "skills"],
+    "success_url": "/test",
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
+  }
