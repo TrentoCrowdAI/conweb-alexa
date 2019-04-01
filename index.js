@@ -1,5 +1,5 @@
 var express = require('express');
-const PORT = /*process.env.PORT ||*/ 443 ;
+const PORT = process.env.PORT || 443 ;
 var createError = require('http-errors');
 var path = require('path');
 var logger = require('morgan');
