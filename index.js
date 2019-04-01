@@ -1,5 +1,5 @@
 var express = require('express');
-const PORT = process.env.PORT || 443 ;
+const PORT = process.env.PORT || 8080 ;
 var createError = require('http-errors');
 var path = require('path');
 var logger = require('morgan');
@@ -40,4 +40,4 @@ app.post('/', function (req, res, next) {
     console.log('response sended')
 }); 
 
-app.listen(PORT, () => console.log(`Listening on ${ this.address.port }`))
+app.listen(PORT, () => console.log(`Listening on ${ PORT}`))
