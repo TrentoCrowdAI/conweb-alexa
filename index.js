@@ -32,7 +32,7 @@ alexaApp.launch(function(request, response) {
 });
 
 alexaApp.intent('HelloWorldIntent', {
-  "utterances": ["Hello world"]
+  "utterances": ["hello pietro"]
 }, function(req, res) {
   res.say("Hello to you");
 });
